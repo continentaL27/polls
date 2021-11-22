@@ -1,6 +1,7 @@
 package com.conti.polls.model;
 
 
+import com.conti.polls.model.audit.DateAudit;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
@@ -23,7 +24,7 @@ import java.util.Set;
                 "email"
         })
 })
-public class User {
+public class User extends DateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
